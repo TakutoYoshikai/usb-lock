@@ -15,7 +15,7 @@ usbLock.register("/path/to/password-file"); //register key
 //observe usb device
 usbLock.observe("/path/to/password-file", {
   add: function(encryptionKey) {},
-  remove: function() {},
+  remove: function(encryptionKey) {},
 });
 ```
 
