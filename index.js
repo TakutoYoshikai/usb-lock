@@ -37,7 +37,7 @@ function observe(pwPath, events) {
     let pw = fs.readFileSync(pwPath, "utf8").slice(0, 64);
     const id = makeUniqueId(device); 
     if (pw === id) {
-      events.remove();
+      events.remove(makeKey(device));
     }
   });
   usbDetect.startMonitoring();
